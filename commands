@@ -1,3 +1,5 @@
+## Commands for VM Machine
+
 sudo apt-get update
 
 sudo apt-get upgrade
@@ -14,9 +16,13 @@ sudo apt-get install libcurl4-openssl-dev libssl-dev libxml2-dev
 
 sudo R
 
+## Commands whilst in R session
+
 install.packages(c('shiny', 'rmarkdown', 'dplyr'))
 
 q(“no”)
+
+## Commands for VM Machine
 
 sudo gpg --keyserver keys.gnupg.net --recv-keys 3F32EE77E331692F
 
@@ -35,7 +41,12 @@ sudo gdebi shiny-server-1.5.12.933-amd64.deb
 
 sudo systemctl status shiny-server
 
+## Login to RStudio server
 
+1. Create a folder, for example "my-app"
+2. Create an R script and save in "my-app" folder with name "ui.R"
+
+```
 ui <- fluidPage(
  
   # Application title
@@ -53,8 +64,11 @@ ui <- fluidPage(
     )
   )
 )
+```
 
+3. Create an R script and save in "my-app" folder with name "server.R"
 
+```
 library(shiny)
 # Define server logic and R code
 server <- function(input, output) {
@@ -64,7 +78,9 @@ server <- function(input, output) {
 	paste("You typed:", input$text_input)
   })
 }
+```
 
+## Commands for VM Machine
 
 sudo ln -s /home/<username>/my-app /srv/shiny-server/my-app
 
