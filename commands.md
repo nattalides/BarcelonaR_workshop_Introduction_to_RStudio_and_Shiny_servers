@@ -18,9 +18,9 @@ sudo R
 
 ## Commands whilst in R session
 
-install.packages(c('shiny', 'rmarkdown', 'dplyr'))
+install.packages(c('shiny', 'rmarkdown'), Ncpus = 2)
 
-q(“no”)
+q("no")
 
 ## Commands for VM Machine
 
@@ -28,16 +28,17 @@ sudo gpg --keyserver keys.gnupg.net --recv-keys 3F32EE77E331692F
 
 sudo apt-get install gdebi-core
 
-wget https://download2.rstudio.org/server/trusty/amd64/rstudio-server-1.2.5019-amd64.deb
+wget https://download2.rstudio.org/server/xenial/amd64/rstudio-server-1.3.1093-amd64.deb
 
-sudo gdebi rstudio-server-1.2.5019-amd64.deb
+sudo gdebi rstudio-server-1.3.1093-amd64.deb
 
 sudo adduser <username>
 
 sudo apt-get install gdebi-core
-wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.12.933-amd64.deb
 
-sudo gdebi shiny-server-1.5.12.933-amd64.deb
+wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.14.948-amd64.deb
+
+sudo gdebi shiny-server-1.5.14.948-amd64.deb
 
 sudo systemctl status shiny-server
 
