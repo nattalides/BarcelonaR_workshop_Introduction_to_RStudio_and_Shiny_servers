@@ -32,7 +32,7 @@ wget https://download2.rstudio.org/server/xenial/amd64/rstudio-server-1.3.1093-a
 
 sudo gdebi rstudio-server-1.3.1093-amd64.deb
 
-sudo adduser <username>
+sudo adduser \<username\>
 
 sudo apt-get install gdebi-core
 
