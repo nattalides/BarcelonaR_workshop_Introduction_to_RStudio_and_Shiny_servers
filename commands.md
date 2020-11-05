@@ -83,5 +83,5 @@ server <- function(input, output) {
 
 ## Commands for VM Machine
 
-sudo ln -s /home/'<username>'/my-app /srv/shiny-server/my-app
+sudo ln -s /home/\<username\>/my-app /srv/shiny-server/my-app
 
